@@ -11,6 +11,7 @@ variables:
   value: release
 - name: BuildPlatform
   value: any cpu
+- group: RELEASE Management Resources
 - group: RELEASE das-companieshouse
 
 resources:
