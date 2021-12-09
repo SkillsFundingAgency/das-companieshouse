@@ -72,6 +72,6 @@
     <None Include="PreDeployment\Blank.txt" />
     <None Include="Views\Blank.txt" />
     <None Include="Tables\Blank.txt" />
-    <None Include="Database.publish.publish.xml" />
+    <None Include="SFA.DAS.CompaniesHouse.Database.publish.xml" />
   </ItemGroup>
 </Project>
