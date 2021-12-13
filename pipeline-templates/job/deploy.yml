@@ -20,8 +20,8 @@ jobs:
             SubscriptionId: $(SubscriptionId)
             Location: $(ResourceGroupLocation)
             Environment: ${{ parameters.Environment }}
-            TemplatePath: $(Pipeline.Workspace)/das-companieshouse/azure/template.json
-            ParametersPath: $(Pipeline.Workspace)/das-companieshouse/azure/template.parameters.json
+            TemplatePath: $(Build.SourcesDirectory)/das-companieshouse/azure/template.json
+            ParametersPath: $(Build.SourcesDirectory)/das-companieshouse/azure/template.parameters.json
             IsMultiRepoCheckout: true
             TemplateSecrets:
               LoggingRedisConnectionString: $(LoggingRedisConnectionString)
