@@ -55,4 +55,18 @@ stages:
       ServiceConnection: SFA-DAS-DevTest-ARM
       SolutionBaseName: $(SolutionBaseName)
       OverrideBlockOnPossibleDataLoss: ${{ parameters.OverrideBlockOnPossibleDataLoss }}
+
+- stage: Deploy_PROD
+  dependsOn: Build
+  displayName: Deploy to PROD
+  variables:
+  - group: Prod Management Resources
+  - group: Prod Shared Resources
+  jobs:
+  - template: pipeline-templates/job/deploy.yml
+    parameters:
+      Environment: PROD
+      ServiceConnection: SFA-DIG-Prod-ARM
+      SolutionBaseName: $(SolutionBaseName)
+      OverrideBlockOnPossibleDataLoss: ${{ parameters.OverrideBlockOnPossibleDataLoss }}
     
