@@ -74,4 +74,7 @@
     <None Include="Tables\Blank.txt" />
     <None Include="SFA.DAS.CompaniesHouse.Database.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\CompaniesHouseData.sql" />
+  </ItemGroup>
 </Project>
