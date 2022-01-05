@@ -34,5 +34,6 @@
 		PreviousNameCONDATE						Nvarchar(100),
 		PreviousNameCompanyName					Nvarchar(200),
 		ConfStmtNextDueDate						Nvarchar(50),
-		ConfStmtLastMadeUpDate					Nvarchar(50)
+		ConfStmtLastMadeUpDate					Nvarchar(50),
+		ImportDateTime							DateTime DEFAULT getdate()
 );
