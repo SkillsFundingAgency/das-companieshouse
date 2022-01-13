@@ -73,5 +73,12 @@
     <None Include="Views\Blank.txt" />
     <None Include="Tables\Blank.txt" />
     <None Include="SFA.DAS.CompaniesHouse.Database.publish.xml" />
+    <None Include="PostDeployment\PostDeployment.sql" />
+    <Build Include="Schemas\Stg.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo_CompaniesHouseData.sql" />
+    <Build Include="Tables\Stg_CompaniesHouseData.sql" />
+    <Build Include="StoredProcedure\ImportCompaniesHouseToPL.sql" />
   </ItemGroup>
 </Project>
