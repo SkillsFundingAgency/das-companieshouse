@@ -80,7 +80,7 @@ BEGIN TRY
 					  ,[PreviousNameCompanyName]
 					  ,try_convert(date,[ConfStmtNextDueDate],105) As [ConfStmtNextDueDate]
 					  ,try_convert(date,[ConfStmtLastMadeUpDate],105) As [ConfStmtLastMadeUpDate]					  
-				  FROM [dbo].[CompaniesHouseData]
+				  FROM [Stg].[CompaniesHouseData]
 				 				  
 END TRY
 BEGIN CATCH
