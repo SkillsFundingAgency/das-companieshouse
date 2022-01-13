@@ -1,1 +1,1 @@
-﻿CREATE SCHEMA [Stg]
+﻿CREATE SCHEMA [Stg];
