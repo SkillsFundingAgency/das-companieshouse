@@ -9,6 +9,7 @@ AS
 -- ==========================================================================================================
 BEGIN TRY
 		DECLARE @LogID int
+		TRUNCATE TABLE [dbo].[CompaniesHouseData]
 		INSERT INTO [dbo].[CompaniesHouseData]
 						   ([CompanyName]
 						   ,[CompanyNumber]
