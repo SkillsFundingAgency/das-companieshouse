@@ -76,6 +76,7 @@ stages:
   variables:
   - group: Prod Management Resources
   - group: Prod Shared Resources
+  - group: PROD das-companieshouse
   jobs:
   - template: pipeline-templates/job/deploy.yml
     parameters:
