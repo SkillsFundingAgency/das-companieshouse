@@ -85,6 +85,7 @@
     <Build Include="Tables\Management_Log_Execution_Results.sql" />
     <Build Include="Tables\Management_Log_Error_Details.sql" />
     <Build Include="StoredProcedure\Insert_Log_Error_Details.sql" />
+    <Build Include="StoredProcedure\GenerateRunId.sql" />
   </ItemGroup>
   <ItemGroup>
     <ArtifactReference Include="$(DacPacRootPath)\Extensions\Microsoft\SQLDB\Extensions\SqlServer\AzureV12\SqlSchemas\master.dacpac">
