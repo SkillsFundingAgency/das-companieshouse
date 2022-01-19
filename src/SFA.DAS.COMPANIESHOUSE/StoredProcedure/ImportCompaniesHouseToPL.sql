@@ -32,7 +32,7 @@ BEGIN TRY
 
 		BEGIN TRANSACTION
 
-		TRUNCATE TABLE [dbo].[CompaniesHouseData]
+		DELETE FROM [dbo].[CompaniesHouseData]
 		INSERT INTO [dbo].[CompaniesHouseData]
 						   ([CompanyName]
 						   ,[CompanyNumber]
@@ -107,7 +107,7 @@ BEGIN TRY
 				  FROM [Stg].[CompaniesHouseData]
 
 				  IF  EXISTS (select * from INFORMATION_SCHEMA.TABLES  where table_name ='CompaniesHouseData' AND TABLE_SCHEMA='Stg' AND TABLE_TYPE='BASE TABLE')
-				  DROP TABLE [Stg].[CompaniesHouseData]
+				  TRUNCATE TABLE [Stg].[CompaniesHouseData]
 				
 			COMMIT TRANSACTION
 
