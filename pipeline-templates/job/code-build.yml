@@ -10,6 +10,8 @@ jobs:
       clean: all
   steps:
   - template: azure-pipelines-templates/build/step/gitversion.yml@das-platform-building-blocks
+    parameters:
+      SonarCloudProjectKey: SkillsFundingAgency_das-companieshouse
 
 - template: azure-pipelines-templates/build/job/dacpac-template.yml@das-platform-building-blocks
   parameters:
