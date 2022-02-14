@@ -114,7 +114,7 @@ BEGIN TRY
 					UPDATE Mgmt.Log_Execution_Results
 					   SET Execution_Status=1
 						  ,EndDateTime=getdate()
-						  ,FullJobStatus='Pending'
+						  ,FullJobStatus='Finish'
 					 WHERE LogId=@LogID
 					   AND RunId=@RunId
 				 				  
