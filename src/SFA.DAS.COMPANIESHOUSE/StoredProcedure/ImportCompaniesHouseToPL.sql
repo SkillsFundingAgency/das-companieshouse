@@ -34,7 +34,8 @@ BEGIN TRY
 
 		DELETE FROM [dbo].[CompaniesHouseData]
 		INSERT INTO [dbo].[CompaniesHouseData]
-						   ([CompanyName]
+						   ([ID]
+						   ,[CompanyName]
 						   ,[CompanyNumber]
 						   ,[RegAddressAddressLine1]
 						   ,[RegAddressAddressLine2]
@@ -69,7 +70,8 @@ BEGIN TRY
 						   ,[PreviousNameCompanyName]
 						   ,[ConfStmtNextDueDate]
 						   ,[ConfStmtLastMadeUpDate])
-				SELECT [CompanyName]
+				SELECT [ID]
+				      ,[CompanyName]
 					  ,[CompanyNumber]
 					  ,[RegAddressAddressLine1]
 					  ,[RegAddressAddressLine2]

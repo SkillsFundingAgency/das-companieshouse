@@ -1,4 +1,5 @@
 ﻿CREATE TABLE [Stg].[CompaniesHouseData](
+    [ID]                            BIGINT IDENTITY(1,1) NOT NULL,
 	[CompanyName]					[nvarchar](200) NULL,
 	[CompanyNumber]					[nvarchar](50)	NULL,
 	[RegAddressAddressLine1]		[nvarchar](200) NULL,

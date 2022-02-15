@@ -1,5 +1,6 @@
 ﻿CREATE TABLE dbo.CompaniesHouseData
 (
+        ID                                      bigint,
 		CompanyName								varchar(200), 
 		CompanyNumber							varchar(50),
 		RegAddressAddressLine1					varchar(200), 
