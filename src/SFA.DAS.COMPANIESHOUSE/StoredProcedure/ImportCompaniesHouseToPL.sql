@@ -69,7 +69,9 @@ BEGIN TRY
 						   ,[PreviousNameCONDATE]
 						   ,[PreviousNameCompanyName]
 						   ,[ConfStmtNextDueDate]
-						   ,[ConfStmtLastMadeUpDate])
+						   ,[ConfStmtLastMadeUpDate]
+						   ,[ImportDateTime]
+						   ,[SourceFileName])
 				SELECT [ID]
 				      ,[CompanyName]
 					  ,[CompanyNumber]
@@ -105,7 +107,9 @@ BEGIN TRY
 					  ,try_convert(date,[PreviousNameCONDATE],105) As [PreviousNameCONDATE]
 					  ,[PreviousNameCompanyName]
 					  ,try_convert(date,[ConfStmtNextDueDate],105) As [ConfStmtNextDueDate]
-					  ,try_convert(date,[ConfStmtLastMadeUpDate],105) As [ConfStmtLastMadeUpDate]					  
+					  ,try_convert(date,[ConfStmtLastMadeUpDate],105) As [ConfStmtLastMadeUpDate]	
+					  ,[ImportDateTime]
+					  ,[SourceFileName]
 				  FROM [Stg].[CompaniesHouseData]
 
 				  IF  EXISTS (select * from INFORMATION_SCHEMA.TABLES  where table_name ='CompaniesHouseData' AND TABLE_SCHEMA='Stg' AND TABLE_TYPE='BASE TABLE')

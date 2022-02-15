@@ -36,5 +36,6 @@
 		PreviousNameCompanyName					varchar(200),
 		ConfStmtNextDueDate						Date,
 		ConfStmtLastMadeUpDate					Date,
-		ImportDateTime							DateTime DEFAULT getdate()
+		ImportDateTime							DateTime ,
+		SourceFileName                          nvarchar(100)
 );

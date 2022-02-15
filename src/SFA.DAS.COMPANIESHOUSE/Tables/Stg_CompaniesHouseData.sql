@@ -35,6 +35,7 @@
 	[PreviousNameCompanyName]		[nvarchar](200) NULL,
 	[ConfStmtNextDueDate]			[nvarchar](50)	NULL,
 	[ConfStmtLastMadeUpDate]		[nvarchar](50)	NULL,
-	[ImportDateTime]				[datetime]		NULL
+	[ImportDateTime]				[datetime]	default(getdate())	NULL,
+	[SourceFileName]                [nvarchar](100) NULL
 ) ON [PRIMARY]
 GO
