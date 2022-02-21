@@ -34,7 +34,8 @@ BEGIN TRY
 
 		DELETE FROM [dbo].[CompaniesHouseData]
 		INSERT INTO [dbo].[CompaniesHouseData]
-						   ([CompanyName]
+						   ([ID]
+						   ,[CompanyName]
 						   ,[CompanyNumber]
 						   ,[RegAddressAddressLine1]
 						   ,[RegAddressAddressLine2]
@@ -68,8 +69,11 @@ BEGIN TRY
 						   ,[PreviousNameCONDATE]
 						   ,[PreviousNameCompanyName]
 						   ,[ConfStmtNextDueDate]
-						   ,[ConfStmtLastMadeUpDate])
-				SELECT [CompanyName]
+						   ,[ConfStmtLastMadeUpDate]
+						   ,[ImportDateTime]
+						   ,[SourceFileName])
+				SELECT [ID]
+				      ,[CompanyName]
 					  ,[CompanyNumber]
 					  ,[RegAddressAddressLine1]
 					  ,[RegAddressAddressLine2]
@@ -103,7 +107,9 @@ BEGIN TRY
 					  ,try_convert(date,[PreviousNameCONDATE],105) As [PreviousNameCONDATE]
 					  ,[PreviousNameCompanyName]
 					  ,try_convert(date,[ConfStmtNextDueDate],105) As [ConfStmtNextDueDate]
-					  ,try_convert(date,[ConfStmtLastMadeUpDate],105) As [ConfStmtLastMadeUpDate]					  
+					  ,try_convert(date,[ConfStmtLastMadeUpDate],105) As [ConfStmtLastMadeUpDate]	
+					  ,[ImportDateTime]
+					  ,[SourceFileName]
 				  FROM [Stg].[CompaniesHouseData]
 
 				  IF  EXISTS (select * from INFORMATION_SCHEMA.TABLES  where table_name ='CompaniesHouseData' AND TABLE_SCHEMA='Stg' AND TABLE_TYPE='BASE TABLE')
@@ -114,7 +120,7 @@ BEGIN TRY
 					UPDATE Mgmt.Log_Execution_Results
 					   SET Execution_Status=1
 						  ,EndDateTime=getdate()
-						  ,FullJobStatus='Pending'
+						  ,FullJobStatus='Finish'
 					 WHERE LogId=@LogID
 					   AND RunId=@RunId
 				 				  

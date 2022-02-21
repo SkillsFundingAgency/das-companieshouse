@@ -1,6 +1,6 @@
 ﻿CREATE TABLE dbo.CompaniesHouseData
 (
-		CompanyName								varchar(200), 
+        CompanyName								varchar(200), 
 		CompanyNumber							varchar(50),
 		RegAddressAddressLine1					varchar(200), 
 		RegAddressAddressLine2					varchar(200), 
@@ -35,5 +35,7 @@
 		PreviousNameCompanyName					varchar(200),
 		ConfStmtNextDueDate						Date,
 		ConfStmtLastMadeUpDate					Date,
-		ImportDateTime							DateTime DEFAULT getdate()
+		ImportDateTime							DateTime ,
+		ID                                      bigint,
+		SourceFileName                          nvarchar(100)
 );
